@@ -24,7 +24,7 @@ UserModel.hasMany(ArticleModel);
 ArticleModel.belongsTo(UserModel);
 
 const USERS = 4;
-const ARTICLES_PER_USER = 5;
+const ARTICLES_PER_USER = 3;
 
 faker.seed(123);
 db.sync({ force: true }).then(() => (
