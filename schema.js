@@ -6,7 +6,7 @@ import {
   GraphQLList,
   // GraphQLNonNull,
 } from 'graphql';
-import { /* Article ,*/ User } from './db';
+import { /* Article , */ User } from './db';
 
 const UserType = new GraphQLObjectType({
   name: 'User',
@@ -25,8 +25,8 @@ const UserType = new GraphQLObjectType({
       type: GraphQLString,
     },
     // articles: {
-    //   type: new GraphQLList(ArticleType),
-    //   resolve: parent => (
+    //   type: new GraphQLList(ArticleType), // eslint-disable-line
+    //   resolve: (parent) => (
     //     parent.getArticles()
     //   ),
     // },
@@ -48,7 +48,7 @@ const UserType = new GraphQLObjectType({
 //     },
 //     user: {
 //       type: UserType,
-//       resolve: article => (
+//       resolve: (article) => (
 //         article.getUser()
 //       ),
 //     },

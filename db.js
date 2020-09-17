@@ -34,7 +34,7 @@ db.sync({ force: true }).then(() => (
       lastname: faker.lorem.words(3),
       name: faker.lorem.words(3),
       username: faker.internet.userName(),
-    }).then(user => (
+    }).then((user) => (
       _.times(ARTICLES_PER_USER, () => (
         user.createArticle({
           description: faker.lorem.words(30),
